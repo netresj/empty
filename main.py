@@ -17,9 +17,7 @@ from sklearn.metrics import accuracy_score, confusion_matrix
 
 (X_train, y_train), (X_test, y_test) = load_data()
 
-fig_id = 0
-
-def data_visualize(image, label, predict=None):
+def data_visualize(image, label, file_name, predict=None):
     plt.figure(figsize=(5, 5))
     title = "label " + str(label)
     if predict != None:
@@ -27,11 +25,10 @@ def data_visualize(image, label, predict=None):
     plt.title(title)
     plt.imshow(image)
     plt.gray()
-    plt.savefig("/kqi/output/figure/fig" + str(fig_id) + ".png")
-    fig_id += 1
+    plt.savefig("/kqi/output/figure/" + file_name + ".png")
 
 for i in range(3):
-    data_visualize(X_train[i], y_train[i])
+    data_visualize(X_train[i], y_train[i], "input_data/fig" + str(i))
 
 X_train = X_train.astype("float32") / 255
 X_test = X_test.astype("float32") / 255
