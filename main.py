@@ -5,7 +5,6 @@ import numpy as np
 # 可視化に使用
 import matplotlib.pyplot as plt
 import seaborn as sns
-%matplotlib inline
 
 # 学習に使う keras モジュール
 from tensorflow.keras.datasets.mnist import load_data
