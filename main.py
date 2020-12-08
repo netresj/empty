@@ -28,7 +28,7 @@ def data_visualize(image, label, file_name, predict=None):
     plt.savefig("/kqi/output/figure/" + file_name + ".png")
 
 for i in range(3):
-    data_visualize(X_train[i], y_train[i], "input_data/fig" + str(i))
+    data_visualize(X_train[i], y_train[i], "fig" + str(i))
 
 X_train = X_train.astype("float32") / 255
 X_test = X_test.astype("float32") / 255
